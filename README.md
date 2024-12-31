@@ -19,7 +19,7 @@ Prediction model is in preductive and the prediction model will be able to be re
 
 - `code/`: SQL scripts and Jupyter Notebook for data cleaning and preparation.
 - `databoard/`: Quick sight file for the interactive dashboard.
-- `pipeline`: Matallion ETL pipeline for data timely, autorefresh.
+- `pipeline/`: Matallion ETL pipeline for data timely, autorefresh.
 
 ## Usage:
 1. Download the repository
