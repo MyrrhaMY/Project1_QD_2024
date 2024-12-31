@@ -17,9 +17,9 @@ Prediction model is in preductive and the prediction model will be able to be re
 
 ## Files
 
-- 'code/': SQL scripts and Jupyter Notebook for data cleaning and preparation.
-- 'databoard/': Quick sight file for the interactive dashboard.
-- 'pipeline': Matallion ETL pipeline for data timely, autorefresh.
+- `code/`: SQL scripts and Jupyter Notebook for data cleaning and preparation.
+- `databoard/`: Quick sight file for the interactive dashboard.
+- `pipeline`: Matallion ETL pipeline for data timely, autorefresh.
 
 ## Usage:
 1. Download the repository
@@ -28,8 +28,8 @@ Prediction model is in preductive and the prediction model will be able to be re
 
 ## About the Dataset:
 This dataset contains healthcare lab results and demographic information from 2016-2024, with the following fields:
-- 'ACCN_ID': Accession ID
-- 'LOINC': Loinc Code
+- `ACCN_ID`: Accession ID
+- `LOINC`: Loinc Code
 
 ## Tools Used:
 - Snowflake - SQL
