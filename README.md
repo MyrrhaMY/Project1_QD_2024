@@ -23,33 +23,41 @@ Prediction model is in preductive and the prediction model will be able to be re
 
 ## Usage:
 1. Download the repository
-2. Open Diabetes_MY.xxx in Quicksight Reader.
+2. Open Diabetes_MY.xxx in Quicksight Reader or preview with the screenshot.
 3. Explore the interactive dashboard.
 
 ## About the Dataset:
 This dataset contains healthcare lab results and demographic information from 2016-2024, with the following fields:
 - `ACCN_ID`: Accession ID
 - `LOINC`: Loinc Code
+- `ORDER_NAME`
+- `RESULT_NAME`
+- `RESULT_VALUE`
 
 ## Tools Used:
-- Snowflake - SQL
-- Matallion - Data pipeline
-- Amazon Quick Sight - Dashboard building
+- **Snowflake** - Data preparation for SQL
+- **Matallion** - Data pipeline
+- **Amazon Quicksight** - Dashboard building
 
-# Project sturcture
-1. Data cleaning
+## Project sturcture
+### 1. Data cleaning
    - Keep only rows with valid Patient ID and in date range 2016 to present date.
-   - 
-3. Data manipulation
-   - Converting to different data types
-   - - Creating new features
-4. Data Preparation and qulity check
-5. Data Analytics
-   - statistical analytical methods
-   - Descriptive
-   - Diagnostic
-   - regression
-   - classification
-   - time series analysis
-   - A/B testing
+   - Research through lab test options keep only the test result that is related to diabetes and prediabetes diagnostics.
+   - Filter the data use `LOINC_CODE` that match the test that is needed for analysis, and normalize the `LOINC_CODE`.
+   - Normalization `RESULT_VALUE` by getting rid of unrelated string, sign and unrealistic number that is out of range.
+   - Categorize each patient record based on the `RESULT_VALUE` to 'Diabetes', 'Prediabetes' and 'Normal'.
+### 2. Data manipulation
+   - Converting to different data types.
+   - Creating new features that could be directly used in dashboard.
+   - Merge lab data file with diagnostic infornation file and third party data file.
+### 3. Data Preparation and qulity check
+   - Make sure every result is proper Normalized
+   - Make sure we didn't accidently loose valueable data while cleaning.
+   - Make sure NULL values are treated correctly.
+   - Compare outcome percentage with general data for difference.
+### 4. Data Pipeline
+   - Seperate last 30 days data from the original (last updated) cleaned data tabel.
+   - Merge two data file by
+### 5. Data Visualization
+   - Set up calculation field
 
